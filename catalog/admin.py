@@ -6,6 +6,7 @@ from .models import Author, Genre, Book, BookInstance, Language
 class BooksInline(admin.TabularInline):
     model = Book
     extra = 0
+    show_change_link = True
 
 class AuthorAdmin(admin.ModelAdmin):
     list_display = ('last_name', 'first_name', 'date_of_birth', 'date_of_death')
